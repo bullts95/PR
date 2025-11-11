@@ -12,11 +12,11 @@ from langchain_classic.chains.combine_documents import create_stuff_documents_ch
 # 1. ベクトルDB(Chroma)の保存先ディレクトリ
 # (vectorize_references.py で指定したものと同じ)
 # 14行目を修正
-CHROMA_PATH = r"C:\Projects\PR\DB"
+CHROMA_PATH = r"C:\Users\Yoshiki Inoue\OneDrive\Projects\Parental_rights\DB"
 
 # 2. 埋め込みモデルの指定
 # (vectorize_references.py で指定したものと同じ)
-EMBED_MODEL_NAME = "all-mpnet-base-v2"
+EMBED_MODEL_NAME = "intfloat/multilingual-e5-large"
 
 # 3. LM Studio の API エンドポイント
 # (通常は "http://localhost:1234/v1" です)
