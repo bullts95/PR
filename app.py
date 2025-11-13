@@ -15,7 +15,7 @@ EMBED_MODEL_NAME = "intfloat/multilingual-e5-large"
 
 # ▼▼▼ 修正点 2: LM Studio の「OpenAI互換」エンドポイントを指定 ▼▼▼
 # デフォルトは http://localhost:1234/v1 です
-OPENAI_COMPATIBLE_BASE_URL = "http://localhost:1234/v1" 
+llm_url = st.secrets["LLM_BASE_URL"]
 LLM_MODEL_NAME = "local-model" # OpenAI APIでは "api_key" が必要だが、ローカルLLMなので "dummy" で良い
 
 # --- 1. モデルとDBのロード (初回のみ実行) ---
@@ -26,7 +26,7 @@ def get_models_and_retriever():
     
     # ▼▼▼ 修正点 3: Ollama クラスの代わりに ChatOpenAI クラスを使用 ▼▼▼
     llm = ChatOpenAI(
-        base_url=OPENAI_COMPATIBLE_BASE_URL,
+        base_url=llm_url,
         api_key="dummy-key", # 必須だが値は何でもよい
         model=LLM_MODEL_NAME # LM Studio側でロードしているモデル
     )
