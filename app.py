@@ -97,7 +97,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-if prompt := st.chat_input("質問を入力してください (例: 親権停止の要件は？)"):
+if prompt := st.chat_input("質問を入力してください (例: 親権停止の要件について教えて。)"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
