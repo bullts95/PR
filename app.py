@@ -10,7 +10,7 @@ from langchain_core.output_parsers import StrOutputParser
 from operator import itemgetter
 
 # --- 定数設定 ---
-CHROMA_PATH = r"C:/Users/Yoshiki Inoue/OneDrive/Projects/Parental_rights/DB"
+CHROMA_PATH = "./db"
 EMBED_MODEL_NAME = "intfloat/multilingual-e5-large"
 
 # ▼▼▼ 修正点 2: LM Studio の「OpenAI互換」エンドポイントを指定 ▼▼▼
